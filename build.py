@@ -14,7 +14,7 @@ def get_personal_data():
                 </p> -->
                 <p>
                     <span style="font-weight: bold;">Bio:</span> 
-                    I was a PhD student at the <a href="https://uni-tuebingen.de/en/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/autonomous-vision/home/" target="_blank">Max Planck Insitute for Intelligent Systems</a> supervised by <a href="https://www.cvlibs.net/" target="_blank">Andreas Geiger</a>.
+                    I was a PhD student at the <a href="um.edu.mo" target="_blank">University of Macau</a> supervised by <a href="https://www.um.edu.mo/fss/pa/about_us/staff/TaoLi.html" target="_blank">Tao LI</a>.
                     During my PhD studies, I joined <a href="https://research.google/teams/brain/">Google Brain</a> for an internship and subsequently as a student researcher.
                     As an undergraduate student, I received a BSc in Mathematics from the <a href="http://www.mi.uni-koeln.de/main/index.en.php" target="_blank">University of Cologne (Germany)</a> and a MSc from the 
                     <!-- During my Bachelor studies, I spent one year at the <a href="https://www.ub.edu/web/portal/en/" target="_blank">University of Barcelona</a>, Spain, funded by the ERASMUS program. -->
