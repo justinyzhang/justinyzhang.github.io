@@ -1,13 +1,13 @@
 from pybtex.database.input import bibtex
 
 def get_personal_data():
-    name = ["Michael", "Niemeyer"]
-    email = "micniemeyer1@gmail.com"
-    twitter = "Mi_Niemeyer"
-    github = "m-niemeyer"
+    name = ["Justin Yaotian", "Zhang"]
+    email = "justinzhang0522@gmail.com"
+    twitter = "JYaotian"
+    github = "justinyzhang"
     linkedin = "michael-niemeyer"
     bio_text = f"""
-                <p>I am a research scientist at Google working on 3D computer vision and graphics.</p>
+                <p>I am a undergraduate student at Department of Economics, University of Macau.</p>
                 <!-- <p>
                     <span style="font-weight: bold;">Research:</span>
                     I am excited about complex problems that can be tackled with learning-based systems. Currently, my research focuses on 3D vision, and I am interested in how machines can infer 3D representations from sparse observations. Further, I am big fan of neural scene representations, \ie, how scenes are best represented in learning-based systems using deep neural networks. 
