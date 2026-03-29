@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yaotian Zhang — Economics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text: #1c1c1c;
+      --text-mid: #3a3a3a;
+      --text-secondary: #555;
+      --text-light: #777;
+      --accent: #8b0000;
+      --accent-hover: #a50000;
+      --border: #ccc;
+      --border-light: #e0e0e0;
+      --bg: #ffffff;
+      --bg-subtle: #f7f7f7;
+      --serif: 'Crimson Pro', Georgia, serif;
+      --sans: 'Libre Franklin', 'Helvetica Neue', sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: var(--sans);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 15.5px;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    a:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* ── Header ─────────────────────────────── */
+    header {
+      padding: 56px 0 0;
+    }
+
+    .header-grid {
+      display: flex;
+      gap: 36px;
+      align-items: flex-start;
+    }
+
+    .photo {
+      width: 155px;
+      min-width: 155px;
+      height: 195px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-light);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      font-size: 13px;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .header-info h1 {
+      font-family: var(--serif);
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    .header-info .subtitle {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-top: 5px;
+      line-height: 1.55;
+    }
+
+    .header-info .links {
+      margin-top: 14px;
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.9;
+    }
+
+    .links .sep {
+      margin: 0 6px;
+      color: var(--border);
+    }
+
+    /* ── Divider ── */
+    .rule {
+      border: none;
+      border-top: 1px solid var(--border-light);
+      margin: 36px 0;
+    }
+
+    /* ── Bio ── */
+    .bio {
+      font-size: 15px;
+      color: var(--text-mid);
+      line-height: 1.85;
+    }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 36px;
+    }
+
+    section h2 {
+      font-family: var(--serif);
+      font-size: 21px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 14px;
+      letter-spacing: -0.005em;
+    }
+
+    /* ── Research Interests ── */
+    .fields {
+      font-size: 15px;
+      color: var(--text-mid);
+      line-height: 1.8;
+    }
+
+    /* ── Papers ── */
+    .paper {
+      margin-bottom: 22px;
+    }
+
+    .paper-title {
+      font-family: var(--serif);
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.45;
+    }
+
+    .paper-meta {
+      font-size: 13.5px;
+      color: var(--text-light);
+      margin-top: 3px;
+    }
+
+    .abstract-btn {
+      font-size: 13px;
+      color: var(--accent);
+      cursor: pointer;
+      border: none;
+      background: none;
+      padding: 0;
+      margin-top: 5px;
+      font-family: var(--sans);
+      font-weight: 400;
+    }
+    .abstract-btn:hover { text-decoration: underline; }
+
+    .abstract-text {
+      display: none;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-top: 8px;
+      padding-left: 14px;
+      border-left: 2px solid var(--border-light);
+    }
+    .abstract-text.show { display: block; }
+
+    /* ── Education ── */
+    .edu {
+      margin-bottom: 12px;
+    }
+    .edu-degree {
+      font-size: 15px;
+      color: var(--text);
+    }
+    .edu-school {
+      font-size: 14px;
+      color: var(--text-light);
+      margin-top: 1px;
+    }
+
+    /* ── Experience ── */
+    .exp {
+      margin-bottom: 12px;
+    }
+    .exp-role {
+      font-size: 15px;
+      color: var(--text);
+    }
+    .exp-detail {
+      font-size: 14px;
+      color: var(--text-light);
+      margin-top: 1px;
+    }
+
+    /* ── Misc ── */
+    .misc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.85;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border-light);
+      margin-top: 24px;
+      padding: 24px 0 48px;
+      font-size: 13px;
+      color: var(--text-light);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .header-grid {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .photo {
+        width: 120px;
+        min-width: 120px;
+        height: 150px;
+      }
+      header { padding-top: 36px; }
+      .header-info h1 { font-size: 25px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ════ HEADER ════ -->
+  <header>
+    <div class="header-grid">
+      <div class="photo">
+        <img src="photo.jpg" alt="Yaotian Zhang">
+      </div>
+      <div class="header-info">
+        <h1>Yaotian (Justin) Zhang</h1>
+        <div class="subtitle">
+          Incoming PhD Student in Economics<br>
+          University of Nebraska&ndash;Lincoln
+        </div>
+        <div class="links">
+          <a href="mailto:justinzhang0522@gmail.com">justinzhang0522@gmail.com</a><br>
+          <a href="#">CV [PDF]</a>
+          <span class="sep">/</span>
+          <a href="https://www.linkedin.com/in/justin-zhang-958853210">LinkedIn</a>
+          <span class="sep">/</span>
+          <a href="https://github.com/">GitHub</a>
+          <span class="sep">/</span>
+          <a href="https://scholar.google.com/">Google Scholar</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <hr class="rule">
+
+  <!-- ════ BIO ════ -->
+  <section>
+    <p class="bio">
+      I am an incoming PhD student in Economics at the University of Nebraska&ndash;Lincoln (Fall 2026).
+      I hold an MA in Economics, Data, and Policy from Central European University,
+      where I spent an exchange semester at the Stockholm School of Economics,
+      and a BSc in Economics from the University of Macau.
+      My research applies causal inference and spatial econometric methods
+      to questions in political economy, with a focus on how institutional boundaries
+      and policy discontinuities shape economic outcomes in border regions.
+      I grew up in Dandong, a city on the China&ndash;North Korea border,
+      which motivates my interest in cross-border economic spillovers.
+    </p>
+  </section>
+
+  <!-- ════ RESEARCH INTERESTS ════ -->
+  <section>
+    <h2>Research Interests</h2>
+    <p class="fields">
+      Political Economy, Labor Economics, Public Economics, Applied Microeconomics, Spatial Econometrics
+    </p>
+  </section>
+
+  <!-- ════ WORKING PAPERS ════ -->
+  <section>
+    <h2>Working Papers</h2>
+
+    <div class="paper">
+      <div class="paper-title">
+        &ldquo;Green Borders: Cannabis Market Spillovers across U.S. State Borders&rdquo;
+      </div>
+      <div class="paper-meta">Master&rsquo;s Thesis &middot; Central European University &middot; Advisor: Sergey Lychagin</div>
+      <button class="abstract-btn" onclick="toggle(this)">[Abstract]</button>
+      <div class="abstract-text">
+        This paper studies cross-border market spillovers in the context of U.S. cannabis legalization.
+        Using 269 geocoded dispensary locations in Illinois and a difference-in-differences design
+        combined with spatial econometric methods, I examine how Missouri&rsquo;s legalization of
+        recreational cannabis affected sales patterns at Illinois border-region dispensaries.
+        Preliminary findings suggest that the out-of-state sales share declined approximately
+        8.5 percentage points post-legalization, with dispensaries within 15 miles of state borders
+        disproportionately affected. The results highlight how policy discontinuities at
+        jurisdictional boundaries generate measurable economic spillovers.
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ EDUCATION ════ -->
+  <section>
+    <h2>Education</h2>
+
+    <div class="edu">
+      <div class="edu-degree">PhD in Economics, 2026&ndash;2031 (expected)</div>
+      <div class="edu-school">University of Nebraska&ndash;Lincoln</div>
+    </div>
+
+    <div class="edu">
+      <div class="edu-degree">MA in Economics, Data, and Policy, 2024&ndash;2026</div>
+      <div class="edu-school">Central European University</div>
+    </div>
+
+    <div class="edu">
+      <div class="edu-degree">Erasmus+ Exchange, Fall 2025</div>
+      <div class="edu-school">Stockholm School of Economics</div>
+    </div>
+
+    <div class="edu">
+      <div class="edu-degree">BSc in Economics, 2020&ndash;2024</div>
+      <div class="edu-school">University of Macau</div>
+    </div>
+  </section>
+
+  <!-- ════ EXPERIENCE ════ -->
+  <section>
+    <h2>Experience</h2>
+
+    <div class="exp">
+      <div class="exp-role">Teaching Assistant, Graduate Causal Inference Workshop</div>
+      <div class="exp-detail">Central European University</div>
+    </div>
+
+    <div class="exp">
+      <div class="exp-role">Research Assistant, Faculty of Social Sciences, 2022&ndash;2023</div>
+      <div class="exp-detail">University of Macau</div>
+    </div>
+
+    <div class="exp">
+      <div class="exp-role">Teaching Assistant, Lui Che Woo College, Spring 2024</div>
+      <div class="exp-detail">University of Macau</div>
+    </div>
+  </section>
+
+  <!-- ════ AWARDS ════ -->
+  <section>
+    <h2>Awards</h2>
+    <div class="misc">
+      CEU Master&rsquo;s Distinction Scholarship, 2024&ndash;2026<br>
+      Dean&rsquo;s Honour List, Faculty of Social Sciences, University of Macau, 2022&ndash;2023
+    </div>
+  </section>
+
+  <!-- ════ SKILLS ════ -->
+  <section>
+    <h2>Skills</h2>
+    <div class="misc">
+      Programming: R, Stata, Python, LaTeX, ArcGIS<br>
+      Languages: Mandarin (native), English (fluent), Cantonese (comprehension), German (basic)
+    </div>
+  </section>
+
+  <!-- ════ FOOTER ════ -->
+  <footer>
+    &copy; 2026 Yaotian Zhang
+  </footer>
+
+</div>
+
+<script>
+  function toggle(btn) {
+    const t = btn.nextElementSibling;
+    t.classList.toggle('show');
+    btn.textContent = t.classList.contains('show') ? '[Hide Abstract]' : '[Abstract]';
+  }
+</script>
+
+</body>
+</html>
