@@ -6,47 +6,50 @@
   <title>Yaotian Zhang — Economics</title>
 
   <!-- ── SEO & Social ── -->
-  <meta name="description" content="Justin (Yaotian) Zhang — Incoming PhD student in Economics at the University of Nebraska–Lincoln. Research in labor, health, industrial organization, and causal inference.">
+  <meta name="description" content="Justin (Yaotian) Zhang — Incoming PhD student in Economics at the University of Nebraska–Lincoln, working at the intersection of public and labor economics.">
   <meta name="author" content="Yaotian Zhang">
-  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#15171a" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fcfbf9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#13151a" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Yaotian Zhang — Economics">
-  <meta property="og:description" content="Incoming PhD student in Economics at the University of Nebraska–Lincoln. Labor, health, IO, and causal inference.">
+  <meta property="og:description" content="Incoming PhD student in Economics at the University of Nebraska–Lincoln. Public, labor, IO, and causal inference.">
   <meta property="og:image" content="Portrait.jpg">
   <meta property="og:url" content="https://justinyzhang.github.io/">
   <meta name="twitter:card" content="summary">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --text: #1c1c1c;
-      --text-mid: #3a3a3a;
-      --text-secondary: #555;
-      --text-light: #777;
-      --accent: #8b0000;
-      --accent-hover: #a50000;
-      --border: #ccc;
-      --border-light: #e0e0e0;
-      --bg: #ffffff;
-      --bg-subtle: #f7f7f7;
-      --serif: 'Crimson Pro', Georgia, serif;
-      --sans: 'Libre Franklin', 'Helvetica Neue', sans-serif;
+      --text: #1a1a1a;
+      --text-mid: #33312e;
+      --text-secondary: #57534d;
+      --text-light: #847f77;
+      --accent: #7c1c1c;
+      --accent-hover: #9a2727;
+      --border: #d8d3ca;
+      --border-light: #e8e3da;
+      --bg: #fcfbf9;
+      --bg-subtle: #f4f1ea;
+      --shadow: 0 1px 2px rgba(40,33,20,0.04), 0 8px 24px rgba(40,33,20,0.06);
+      --display: 'Fraunces', Georgia, serif;
+      --serif: 'Newsreader', Georgia, serif;
+      --sans: 'Inter', 'Helvetica Neue', sans-serif;
     }
 
     [data-theme="dark"] {
-      --text: #e8e6e3;
-      --text-mid: #cfccc7;
-      --text-secondary: #b0aca6;
-      --text-light: #8a8780;
-      --accent: #e07a6f;
-      --accent-hover: #ef9389;
-      --border: #45484d;
-      --border-light: #2c2f33;
-      --bg: #15171a;
-      --bg-subtle: #1d2024;
+      --text: #ece9e3;
+      --text-mid: #d4d0c8;
+      --text-secondary: #b3aca1;
+      --text-light: #8b857a;
+      --accent: #e08b7d;
+      --accent-hover: #efa395;
+      --border: #3b3f47;
+      --border-light: #282b31;
+      --bg: #13151a;
+      --bg-subtle: #1b1e24;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 30px rgba(0,0,0,0.35);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -57,31 +60,32 @@
       font-family: var(--sans);
       color: var(--text);
       background: var(--bg);
-      line-height: 1.7;
-      font-size: 15.5px;
+      line-height: 1.72;
+      font-size: 16px;
       font-weight: 400;
+      letter-spacing: -0.003em;
       -webkit-font-smoothing: antialiased;
-      transition: background 0.3s ease, color 0.3s ease;
+      text-rendering: optimizeLegibility;
+      transition: background 0.4s ease, color 0.4s ease;
     }
 
     a {
       color: var(--accent);
       text-decoration: none;
-      transition: color 0.15s;
+      transition: color 0.15s, opacity 0.15s;
     }
-    a:hover {
-      color: var(--accent-hover);
-      text-decoration: underline;
-    }
+    a:hover { color: var(--accent-hover); }
+
+    ::selection { background: var(--accent); color: #fff; }
 
     :focus-visible {
       outline: 2px solid var(--accent);
-      outline-offset: 2px;
+      outline-offset: 3px;
       border-radius: 2px;
     }
 
     .page {
-      max-width: 760px;
+      max-width: 720px;
       margin: 0 auto;
       padding: 0 28px;
     }
@@ -90,26 +94,40 @@
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: color-mix(in srgb, var(--bg) 88%, transparent);
-      backdrop-filter: saturate(180%) blur(10px);
-      -webkit-backdrop-filter: saturate(180%) blur(10px);
+      z-index: 20;
+      background: color-mix(in srgb, var(--bg) 82%, transparent);
+      backdrop-filter: saturate(180%) blur(12px);
+      -webkit-backdrop-filter: saturate(180%) blur(12px);
       border-bottom: 1px solid var(--border-light);
     }
     .topbar-inner {
-      max-width: 760px;
+      max-width: 720px;
       margin: 0 auto;
-      padding: 9px 28px;
+      padding: 10px 28px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 14px;
     }
+    .brand {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      flex-shrink: 0;
+      opacity: 0;
+      transform: translateY(-4px);
+      transition: opacity 0.3s ease, transform 0.3s ease, color 0.15s;
+      pointer-events: none;
+    }
+    .topbar.scrolled .brand { opacity: 1; transform: none; pointer-events: auto; }
     .nav {
       display: flex;
-      gap: 18px;
+      gap: 20px;
       font-size: 13px;
-      letter-spacing: 0.02em;
+      font-weight: 500;
+      letter-spacing: 0.01em;
       overflow-x: auto;
       scrollbar-width: none;
     }
@@ -118,13 +136,25 @@
       color: var(--text-light);
       white-space: nowrap;
       padding: 4px 0;
+      position: relative;
     }
-    .nav a:hover { color: var(--accent); text-decoration: none; }
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 100%;
+      bottom: -1px;
+      height: 1.5px;
+      background: var(--accent);
+      transition: right 0.25s ease;
+    }
+    .nav a:hover { color: var(--accent); }
+    .nav a.active { color: var(--accent); }
+    .nav a.active::after { right: 0; }
 
     .theme-toggle {
       flex-shrink: 0;
-      width: 34px;
-      height: 34px;
+      width: 36px;
+      height: 36px;
       border: 1px solid var(--border-light);
       border-radius: 50%;
       background: var(--bg-subtle);
@@ -135,69 +165,71 @@
       justify-content: center;
       font-size: 15px;
       line-height: 1;
-      transition: border-color 0.15s, color 0.15s, transform 0.15s;
+      transition: border-color 0.2s, color 0.2s, transform 0.3s;
     }
     .theme-toggle:hover {
       color: var(--accent);
       border-color: var(--accent);
-      transform: rotate(15deg);
+      transform: rotate(20deg) scale(1.05);
     }
 
     /* ── Header ─────────────────────────────── */
     header {
-      padding: 52px 0 0;
+      padding: 64px 0 0;
     }
 
     .header-grid {
       display: flex;
-      gap: 36px;
+      gap: 40px;
       align-items: flex-start;
     }
 
     .photo {
-      width: 155px;
-      min-width: 155px;
-      height: 195px;
+      width: 158px;
+      min-width: 158px;
+      height: 200px;
       background: var(--bg-subtle);
       border: 1px solid var(--border-light);
+      border-radius: 4px;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-light);
-      font-size: 13px;
+      box-shadow: var(--shadow);
+      transition: transform 0.4s cubic-bezier(.2,.7,.2,1), box-shadow 0.4s;
     }
-
+    .photo:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(40,33,20,0.08), 0 18px 40px rgba(40,33,20,0.12);
+    }
     .photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
     }
 
     .header-info h1 {
-      font-family: var(--serif);
-      font-size: 30px;
+      font-family: var(--display);
+      font-size: 35px;
       font-weight: 600;
-      letter-spacing: -0.01em;
-      line-height: 1.2;
+      letter-spacing: -0.02em;
+      line-height: 1.12;
     }
 
     .header-info .subtitle {
-      font-size: 15px;
+      font-family: var(--serif);
+      font-size: 17px;
       color: var(--text-secondary);
-      margin-top: 5px;
-      line-height: 1.55;
+      margin-top: 8px;
+      line-height: 1.5;
     }
 
     .header-info .links {
-      margin-top: 14px;
+      margin-top: 18px;
       font-size: 14px;
       color: var(--text-light);
-      line-height: 1.9;
+      line-height: 1.95;
     }
-
     .links .sep {
-      margin: 0 6px;
+      margin: 0 7px;
       color: var(--border);
     }
 
@@ -205,146 +237,160 @@
     .rule {
       border: none;
       border-top: 1px solid var(--border-light);
-      margin: 36px 0;
+      margin: 40px 0;
     }
 
     /* ── Bio ── */
     .bio {
-      font-size: 15px;
+      font-size: 17px;
+      font-family: var(--serif);
       color: var(--text-mid);
-      line-height: 1.85;
+      line-height: 1.8;
     }
+    .bio + .bio { margin-top: 16px; }
+    .bio strong { font-weight: 500; color: var(--text); }
 
     /* ── Sections ── */
     section {
-      margin-bottom: 36px;
-      scroll-margin-top: 64px;
+      margin-bottom: 44px;
+      scroll-margin-top: 72px;
     }
 
-    section h2 {
-      font-family: var(--serif);
-      font-size: 21px;
-      font-weight: 500;
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .section-head h2 {
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
       color: var(--text);
-      margin-bottom: 14px;
-      letter-spacing: -0.005em;
+    }
+    .section-head .line {
+      flex: 1;
+      height: 1px;
+      background: var(--border-light);
     }
 
     /* ── Research Interests ── */
     .fields {
-      font-size: 15px;
+      font-family: var(--serif);
+      font-size: 17px;
       color: var(--text-mid);
-      line-height: 1.8;
+      line-height: 1.7;
     }
 
     /* ── Papers ── */
-    .paper {
-      margin-bottom: 22px;
-    }
-
+    .paper { margin-bottom: 24px; }
     .paper-title {
       font-family: var(--serif);
-      font-size: 17px;
-      font-weight: 400;
+      font-size: 19px;
+      font-weight: 500;
       color: var(--text);
-      line-height: 1.45;
+      line-height: 1.4;
     }
-
     .paper-meta {
       font-size: 13.5px;
       color: var(--text-light);
-      margin-top: 3px;
+      margin-top: 4px;
     }
 
     .paper-actions {
       display: flex;
       align-items: center;
-      gap: 16px;
-      margin-top: 6px;
+      gap: 18px;
+      margin-top: 8px;
       font-size: 13px;
+      font-weight: 500;
     }
-
     .abstract-btn {
       font-size: 13px;
+      font-weight: 500;
       color: var(--accent);
       cursor: pointer;
       border: none;
       background: none;
       padding: 0;
       font-family: var(--sans);
-      font-weight: 400;
     }
-    .abstract-btn:hover { text-decoration: underline; }
+    .abstract-btn:hover { color: var(--accent-hover); }
 
+    .abstract-text {
+      display: grid;
+      grid-template-rows: 0fr;
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.78;
+      transition: grid-template-rows 0.35s ease, margin-top 0.35s ease;
+      margin-top: 0;
+    }
+    .abstract-text > div {
+      overflow: hidden;
+      padding-left: 16px;
+      border-left: 2px solid var(--border-light);
+    }
+    .abstract-text.show {
+      grid-template-rows: 1fr;
+      margin-top: 12px;
+    }
     .abstract-text p { margin: 0; }
 
     .tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 14px;
+      gap: 7px;
+      margin-top: 16px;
     }
     .tag {
       font-size: 12px;
+      font-weight: 500;
       color: var(--text-light);
       background: var(--bg-subtle);
       border: 1px solid var(--border-light);
       border-radius: 999px;
-      padding: 2px 10px;
+      padding: 3px 11px;
       white-space: nowrap;
+      transition: color 0.15s, border-color 0.15s;
     }
+    .tag:hover { color: var(--accent); border-color: var(--accent); }
     .jel {
       font-size: 12.5px;
       color: var(--text-light);
-      margin-top: 10px;
+      margin-top: 12px;
       letter-spacing: 0.01em;
     }
 
-    .abstract-text {
-      display: grid;
-      grid-template-rows: 0fr;
-      font-size: 14px;
-      color: var(--text-secondary);
-      line-height: 1.8;
-      transition: grid-template-rows 0.3s ease, margin-top 0.3s ease;
-      margin-top: 0;
-    }
-    .abstract-text > div {
-      overflow: hidden;
-      padding-left: 14px;
-      border-left: 2px solid var(--border-light);
-    }
-    .abstract-text.show {
-      grid-template-rows: 1fr;
-      margin-top: 8px;
-    }
-
-    /* ── Education / Experience / Awards rows ── */
-    .edu, .exp, .award { margin-bottom: 12px; }
-    .award { margin-bottom: 10px; }
-
-    .edu-degree, .exp-role, .award-title {
-      font-size: 15px;
+    /* ── List rows ── */
+    .row { margin-bottom: 16px; }
+    .row-main {
+      font-size: 16px;
       color: var(--text);
+      line-height: 1.5;
     }
-    .edu-school, .exp-detail, .award-detail {
+    .row-sub {
       font-size: 14px;
       color: var(--text-light);
-      margin-top: 1px;
+      margin-top: 2px;
     }
 
     /* ── Misc ── */
     .misc {
-      font-size: 14px;
+      font-family: var(--serif);
+      font-size: 16px;
       color: var(--text-secondary);
-      line-height: 1.85;
+      line-height: 1.9;
     }
+    .misc b { font-weight: 500; color: var(--text-mid); }
 
     /* ── Footer ── */
     footer {
       border-top: 1px solid var(--border-light);
-      margin-top: 24px;
-      padding: 24px 0 48px;
+      margin-top: 28px;
+      padding: 26px 0 56px;
       font-size: 13px;
       color: var(--text-light);
       display: flex;
@@ -355,23 +401,27 @@
     footer a { color: var(--text-light); }
     footer a:hover { color: var(--accent); }
 
+    /* ── Reveal animation ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.6s ease, transform 0.6s cubic-bezier(.2,.7,.2,1);
+    }
+    .reveal.in { opacity: 1; transform: none; }
+
     /* ── Responsive ── */
     @media (max-width: 600px) {
-      .header-grid {
-        flex-direction: column;
-        gap: 20px;
-      }
-      .photo {
-        width: 120px;
-        min-width: 120px;
-        height: 150px;
-      }
-      header { padding-top: 32px; }
-      .header-info h1 { font-size: 25px; }
+      body { font-size: 15.5px; }
+      .header-grid { flex-direction: column; gap: 22px; }
+      .photo { width: 130px; min-width: 130px; height: 165px; }
+      header { padding-top: 40px; }
+      .header-info h1 { font-size: 29px; }
+      .bio, .fields { font-size: 16px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      * { scroll-behavior: auto !important; transition: none !important; }
+      * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+      .reveal { opacity: 1; transform: none; }
     }
   </style>
 </head>
@@ -380,6 +430,7 @@
   <!-- ════ TOP BAR ════ -->
   <div class="topbar" id="top">
     <div class="topbar-inner">
+      <a class="brand" href="#top">Yaotian Zhang</a>
       <nav class="nav" aria-label="Section navigation">
         <a href="#about">About</a>
         <a href="#research">Research</a>
@@ -399,10 +450,10 @@
   <header>
     <div class="header-grid">
       <div class="photo">
-        <img src="Portrait.jpg" alt="Portrait of Yaotian Zhang" loading="lazy" width="155" height="195">
+        <img src="Portrait.jpg" alt="Portrait of Yaotian Zhang" loading="lazy" width="158" height="200">
       </div>
       <div class="header-info">
-        <h1>Justin (Yaotian) Zhang</h1>
+        <h1>Justin&nbsp;(Yaotian)&nbsp;Zhang</h1>
         <div class="subtitle">
           Incoming PhD Student in Economics<br>
           University of Nebraska&ndash;Lincoln
@@ -424,33 +475,37 @@
   <hr class="rule">
 
   <!-- ════ BIO ════ -->
-  <section id="about">
+  <section id="about" class="reveal">
     <p class="bio">
-      I am an incoming PhD student in Economics at the University of Nebraska&ndash;Lincoln (Fall 2026).
-      I hold an MA in Economics, Data, and Policy from Central European University,
-      with an Erasmus semester at the Stockholm School of Economics,
-      and a BSc in Economics from the University of Macau.
-      My current research uses quasi-experimental methods&mdash;difference-in-differences
-      and event-study designs&mdash;to study how policy spills across jurisdictional borders,
-      including the enforcement and fiscal externalities that cannabis legalization imposes
-      on neighboring states.
+      I am an economist-in-training working at the intersection of <strong>public and labor
+      economics</strong>. This fall I begin my PhD in Economics at the University of
+      Nebraska&ndash;Lincoln, supported by a Carpenter Fellowship. My research asks how the
+      costs and benefits of policy travel across jurisdictional borders&mdash;who actually
+      bears the burden when one state legalizes, taxes, or enforces while its neighbors do not.
+      I work with administrative microdata and quasi-experimental designs, chiefly
+      difference-in-differences and event studies.
+    </p>
+    <p class="bio">
+      Previously, I completed an MA in Economics, Data, and Policy at Central European
+      University&mdash;with an exchange term at the Stockholm School of Economics&mdash;and a
+      BSc in Economics at the University of Macau.
     </p>
   </section>
 
   <!-- ════ RESEARCH INTERESTS ════ -->
-  <section id="research">
-    <h2>Research Interests</h2>
+  <section id="research" class="reveal">
+    <div class="section-head"><h2>Research Interests</h2><span class="line"></span></div>
     <p class="fields">
-      Labor Economics,
-      Health Economics,
-      Industrial Organization,
+      Public Economics &middot;
+      Labor Economics &middot;
+      Industrial Organization &middot;
       Causal Inference
     </p>
   </section>
 
   <!-- ════ WORKING PAPERS ════ -->
-  <section id="papers">
-    <h2>Working Papers</h2>
+  <section id="papers" class="reveal">
+    <div class="section-head"><h2>Working Papers</h2><span class="line"></span></div>
 
     <div class="paper">
       <div class="paper-title">
@@ -490,81 +545,73 @@
   </section>
 
   <!-- ════ EDUCATION ════ -->
-  <section id="education">
-    <h2>Education</h2>
+  <section id="education" class="reveal">
+    <div class="section-head"><h2>Education</h2><span class="line"></span></div>
 
-    <div class="edu">
-      <div class="edu-degree">PhD in Economics, 2026&ndash;2031 (expected)</div>
-      <div class="edu-school">University of Nebraska&ndash;Lincoln</div>
+    <div class="row">
+      <div class="row-main">PhD in Economics, 2026&ndash;2031 (expected)</div>
+      <div class="row-sub">University of Nebraska&ndash;Lincoln</div>
     </div>
-
-    <div class="edu">
-      <div class="edu-degree">MA in Economics, Data, and Policy, 2024&ndash;2026</div>
-      <div class="edu-school">Central European University</div>
+    <div class="row">
+      <div class="row-main">MA in Economics, Data, and Policy, 2024&ndash;2026</div>
+      <div class="row-sub">Central European University</div>
     </div>
-
-    <div class="edu">
-      <div class="edu-degree">Erasmus+ Exchange, Fall 2025</div>
-      <div class="edu-school">Stockholm School of Economics</div>
+    <div class="row">
+      <div class="row-main">Erasmus+ Exchange, Fall 2025</div>
+      <div class="row-sub">Stockholm School of Economics</div>
     </div>
-
-    <div class="edu">
-      <div class="edu-degree">BSc in Economics, 2020&ndash;2024</div>
-      <div class="edu-school">University of Macau</div>
+    <div class="row">
+      <div class="row-main">BSc in Economics, 2020&ndash;2024</div>
+      <div class="row-sub">University of Macau</div>
     </div>
   </section>
 
   <!-- ════ EXPERIENCE ════ -->
-  <section id="experience">
-    <h2>Experience</h2>
+  <section id="experience" class="reveal">
+    <div class="section-head"><h2>Experience</h2><span class="line"></span></div>
 
-    <div class="exp">
-      <div class="exp-role">Teaching Assistant, Graduate Workshops on Causal Inference and Research Methods, Summer 2025</div>
-      <div class="exp-detail">Hong Kong Metropolitan University</div>
+    <div class="row">
+      <div class="row-main">Teaching Assistant, Graduate Workshops on Causal Inference and Research Methods, Summer 2025</div>
+      <div class="row-sub">Hong Kong Metropolitan University</div>
     </div>
-
-    <div class="exp">
-      <div class="exp-role">Teaching Assistant, Introductory R Programming, Spring 2024</div>
-      <div class="exp-detail">Lui Che Woo College, University of Macau</div>
+    <div class="row">
+      <div class="row-main">Teaching Assistant, Introductory R Programming, Spring 2024</div>
+      <div class="row-sub">Lui Che Woo College, University of Macau</div>
     </div>
-
-    <div class="exp">
-      <div class="exp-role">Research Assistant, Faculty of Social Sciences, 2023&ndash;2024</div>
-      <div class="exp-detail">University of Macau</div>
+    <div class="row">
+      <div class="row-main">Research Assistant, Faculty of Social Sciences, 2023&ndash;2024</div>
+      <div class="row-sub">University of Macau</div>
     </div>
   </section>
 
   <!-- ════ AWARDS ════ -->
-  <section id="awards">
-    <h2>Awards &amp; Fellowships</h2>
+  <section id="awards" class="reveal">
+    <div class="section-head"><h2>Awards &amp; Fellowships</h2><span class="line"></span></div>
 
-    <div class="award">
-      <div class="award-title">Carpenter Fellowship, 2026</div>
-      <div class="award-detail">College of Business, University of Nebraska&ndash;Lincoln</div>
+    <div class="row">
+      <div class="row-main">Carpenter Fellowship, 2026</div>
+      <div class="row-sub">College of Business, University of Nebraska&ndash;Lincoln</div>
     </div>
-
-    <div class="award">
-      <div class="award-title">Graduate Research Assistantship, 2026&ndash;2027</div>
-      <div class="award-detail">Department of Economics, University of Nebraska&ndash;Lincoln</div>
+    <div class="row">
+      <div class="row-main">Graduate Research Assistantship, 2026&ndash;2027</div>
+      <div class="row-sub">Department of Economics, University of Nebraska&ndash;Lincoln</div>
     </div>
-
-    <div class="award">
-      <div class="award-title">Master&rsquo;s Distinction Scholarship, 2024&ndash;2026</div>
-      <div class="award-detail">Central European University (tuition waiver, monthly stipend, full insurance)</div>
+    <div class="row">
+      <div class="row-main">Master&rsquo;s Distinction Scholarship, 2024&ndash;2026</div>
+      <div class="row-sub">Central European University (tuition waiver, monthly stipend, full insurance)</div>
     </div>
-
-    <div class="award">
-      <div class="award-title">Dean&rsquo;s Honour List (top 10%), Spring 2023 and Spring 2024</div>
-      <div class="award-detail">Faculty of Social Sciences, University of Macau</div>
+    <div class="row">
+      <div class="row-main">Dean&rsquo;s Honour List (top 10%), Spring 2023 and Spring 2024</div>
+      <div class="row-sub">Faculty of Social Sciences, University of Macau</div>
     </div>
   </section>
 
   <!-- ════ SKILLS ════ -->
-  <section id="skills">
-    <h2>Skills</h2>
+  <section id="skills" class="reveal">
+    <div class="section-head"><h2>Skills</h2><span class="line"></span></div>
     <div class="misc">
-      Programming: R, Stata, Python, Excel, LaTeX, ArcGIS<br>
-      Languages: Mandarin (native), English (fluent), German (basic), Swedish (basic)
+      <b>Programming</b> &mdash; R, Stata, Python, Excel, LaTeX, ArcGIS<br>
+      <b>Languages</b> &mdash; Mandarin (native), English (fluent), German (basic), Swedish (basic)
     </div>
   </section>
 
@@ -588,22 +635,56 @@
   // ── Dark mode ──
   (function () {
     const root = document.documentElement;
-    const toggle = document.getElementById('themeToggle');
+    const btn = document.getElementById('themeToggle');
     const stored = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const initial = stored || (prefersDark ? 'dark' : 'light');
-
-    function apply(theme) {
+    const apply = (theme) => {
       root.setAttribute('data-theme', theme);
-      toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
-    }
-    apply(initial);
-
-    toggle.addEventListener('click', function () {
+      btn.textContent = theme === 'dark' ? '☀️' : '🌙';
+    };
+    apply(stored || (prefersDark ? 'dark' : 'light'));
+    btn.addEventListener('click', () => {
       const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
       localStorage.setItem('theme', next);
       apply(next);
     });
+  })();
+
+  // ── Scroll reveal ──
+  (function () {
+    if (!('IntersectionObserver' in window)) {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  })();
+
+  // ── Sticky-bar brand + scrollspy ──
+  (function () {
+    const bar = document.getElementById('top');
+    const links = Array.from(document.querySelectorAll('.nav a'));
+    const map = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+    const sections = links.map(a => document.getElementById(a.getAttribute('href').slice(1))).filter(Boolean);
+
+    const onScroll = () => bar.classList.toggle('scrolled', window.scrollY > 80);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    if ('IntersectionObserver' in window) {
+      const spy = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const a = map.get(e.target.id);
+            if (a) a.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+      sections.forEach(s => spy.observe(s));
+    }
   })();
 </script>
 
