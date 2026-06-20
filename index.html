@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yaotian Zhang — Economics</title>
+  <title>Justin Y. Zhang — Economics</title>
 
   <!-- ── SEO & Social ── -->
   <meta name="description" content="Justin (Yaotian) Zhang — Incoming PhD student in Economics at the University of Nebraska–Lincoln, working at the intersection of public and labor economics.">
@@ -11,7 +11,7 @@
   <meta name="theme-color" content="#fcfbf9" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#13151a" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Yaotian Zhang — Economics">
+  <meta property="og:title" content="Justin Y. Zhang — Economics">
   <meta property="og:description" content="Incoming PhD student in Economics at the University of Nebraska–Lincoln. Public, labor, IO, and causal inference.">
   <meta property="og:image" content="Portrait.jpg">
   <meta property="og:url" content="https://justinyzhang.github.io/">
@@ -430,7 +430,7 @@
   <!-- ════ TOP BAR ════ -->
   <div class="topbar" id="top">
     <div class="topbar-inner">
-      <a class="brand" href="#top">Yaotian Zhang</a>
+      <a class="brand" href="#top" onclick="scrollTop(event)">Justin Y. Zhang</a>
       <nav class="nav" aria-label="Section navigation">
         <a href="#about">About</a>
         <a href="#research">Research</a>
@@ -477,7 +477,7 @@
   <!-- ════ BIO ════ -->
   <section id="about" class="reveal">
     <p class="bio">
-      I am an economist-in-training working at the intersection of <strong>public and labor
+      I am an economist-in-training working at the intersection of <strong>labor and public
       economics</strong>. This fall I begin my PhD in Economics at the University of
       Nebraska&ndash;Lincoln, supported by a Carpenter Fellowship. My research asks how the
       costs and benefits of policy travel across jurisdictional borders&mdash;who actually
@@ -496,10 +496,9 @@
   <section id="research" class="reveal">
     <div class="section-head"><h2>Research Interests</h2><span class="line"></span></div>
     <p class="fields">
-      Public Economics &middot;
       Labor Economics &middot;
-      Industrial Organization &middot;
-      Causal Inference
+      Public Economics &middot;
+      Industrial Organization
     </p>
   </section>
 
@@ -618,15 +617,21 @@
   <!-- ════ FOOTER ════ -->
   <footer>
     <span>&copy; 2026 Yaotian Zhang</span>
-    <span><a href="#top">Back to top &uarr;</a></span>
+    <span><a href="#top" onclick="scrollTop(event)">Back to top &uarr;</a></span>
   </footer>
 
 </div>
 
 <script>
+  // ── Back to top ──
+  function scrollTop(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   // ── Abstract toggle ──
   function toggle(btn) {
-    const t = btn.nextElementSibling;
+    const t = btn.closest('.paper').querySelector('.abstract-text');
     const open = t.classList.toggle('show');
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
     btn.textContent = open ? '[Hide Abstract]' : '[Abstract]';
